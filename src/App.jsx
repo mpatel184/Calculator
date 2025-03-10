@@ -11,19 +11,19 @@ function App() {
   const handleEqual = () => {
     try {
       if (input === "") {
-        setResult("Error"); // If "=" is clicked with no input
+        setResult("Error"); 
       } else {
-        let evalResult = eval(input); // Evaluating expression
+        let evalResult = eval(input); 
         if (evalResult === Infinity) {
-          setResult("Infinity"); // Handling division by zero
+          setResult("Infinity"); 
         } else if (isNaN(evalResult)) {
-          setResult("NaN"); // Handling invalid cases like 0/0
+          setResult("NaN"); 
         } else {
           setResult(evalResult);
         }
       }
     } catch {
-      setResult("Error"); // Catching syntax errors
+      setResult("Error");
     }
   };
 
